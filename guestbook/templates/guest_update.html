@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+        h1 {
+            text-align: center;
+            padding: 40px;
+            color: black;
+        }
+    </style>
+    <div class="container">
+        <h1>Редактировать запись</h1>
+        <form method="post">
+            {% include 'partial/guestbook_form.html' with button_text='Сохранить' %}
+            <div class="row mb-3">
+                <div class="col-sm-9 offset-sm-3">
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

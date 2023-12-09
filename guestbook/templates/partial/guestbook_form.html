@@ -1,16 +1,9 @@
-<form method="POST" class="mb-4">
+<form method="POST">
     {% csrf_token %}
     <div class="row mb-3">
         <label for="id_name" class="col-sm-3 col-form-label text-end">Имя:</label>
         <div class="col-sm-9">
             {{ form.name }}
-            {% if form.name.errors %}
-                <ul class="errors">
-                    {% for error in form.name.errors %}
-                        <li>{{ error }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
         </div>
     </div>
 
@@ -18,13 +11,6 @@
         <label for="id_email" class="col-sm-3 col-form-label text-end">Email:</label>
         <div class="col-sm-9">
             {{ form.email }}
-            {% if form.email.errors %}
-                <ul class="errors">
-                    {% for error in form.email.errors %}
-                        <li>{{ error }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
         </div>
     </div>
 
@@ -32,15 +18,9 @@
         <label for="id_text" class="col-sm-3 col-form-label text-end">Текст:</label>
         <div class="col-sm-9">
             {{ form.text }}
-            {% if form.text.errors %}
-                <ul class="errors">
-                    {% for error in form.text.errors %}
-                        <li>{{ error }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
         </div>
     </div>
+
 
     <div class="row mb-3">
         <div class="col-sm-9 offset-sm-3">
