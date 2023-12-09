@@ -1,2 +1,26 @@
 [
+    {
+        "model": "guestbook.guestbook",
+        "pk": 1,
+        "fields": {
+            "name": "John Doe",
+            "email": "john_doe@example.com",
+            "text": "Lorem Ipsum is simply dummy text...",
+            "created_at": "2023-12-09T12:00:00Z",
+            "updated_at": "2023-12-09T12:00:00Z",
+            "status": "active"
+        }
+    },
+    {
+        "model": "guestbook.guestbook",
+        "pk": 2,
+        "fields": {
+            "name": "Vasya Pupkin",
+            "email": "vasya@example.com",
+            "text": "Lorem Ipsum is simply dummy text...",
+            "created_at": "2023-12-09T13:00:00Z",
+            "updated_at": "2023-12-09T13:00:00Z",
+            "status": "blocked"
+        }
+    }
 ]

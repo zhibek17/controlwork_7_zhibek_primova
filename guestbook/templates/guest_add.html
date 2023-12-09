@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+    <style>
+        h1{
+            text-align: center;
+            padding: 40px;
+            color: black;
+        }
+    </style>
+    <div class="container">
+        <h1>Добавить задачу</h1>
+        <form method="post">
+            {% csrf_token %}
+            {% if form.errors %}
+                <div class="alert alert-danger">
+                    <strong>Неверно указан формат</strong>
+                    <ul>
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            {% include 'partial/guestbook_form.html' with button_text='Добавить' %}
+            <div class="row mb-3">
+            </div>
+        </form>
+    </div>
+{% endblock %}
